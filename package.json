@@ -1,28 +1,31 @@
 {
-  "name": "node-js-sample",
+  "name": "static-mailer",
   "version": "0.1.0",
-  "description": "A sample Node.js app using Express 4",
+  "description": "Make a request and send an email",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
-    "express": "^4.0.0"
+    "express": "^4.0.0",
+    "mandrill-api": "^1.0.41"
   },
   "engines": {
     "node": "0.10.x"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-sample"
+    "url": "https://github.com/robmaceachern/static-mailer"
   },
   "keywords": [
     "node",
     "heroku",
-    "express"
+    "express",
+    "mandrill"
   ],
-  "author": "Mark Pundsack",
+  "author": "Rob MacEachern",
   "contributors": [
+    "Mark Pundsack",
     "Zeke Sikelianos <zeke@sikelianos.com> (http://zeke.sikelianos.com)"
   ],
   "license": "MIT"
