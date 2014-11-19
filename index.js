@@ -48,7 +48,7 @@ function sendEmail(request, response) {
         if (redirect) {
             response.redirect(redirect);
         } else {
-            response.send('Hello World!');
+            response.send('Message sent!');
         }
     }, function(e) {
         // Mandrill returns the error as an object with name and message keys
@@ -89,7 +89,7 @@ function getMessageContent(request) {
         if (element.lastIndexOf('_', 0) == 0) {
             // skip it
         } else {
-            content.html += '<p>' + element + ': ' + bodyParams[element] + '</p> ';
+            content.html += '<p><strong>' + element + '</strong> : ' + bodyParams[element] + '</p> ';
             content.text += element + ': ' + bodyParams[element] + '\n';
         }
     });
@@ -97,7 +97,7 @@ function getMessageContent(request) {
         if (element.lastIndexOf('_', 0) == 0) {
             // skip it
         } else {
-            content.html += '<p>' + element + ': ' + bodyParams[element] + '</p> ';
+            content.html += '<p><strong>' + element + '</strong> : ' + bodyParams[element] + '</p> ';
             content.text += element + ': ' + bodyParams[element] + '\n';
         }
     });
